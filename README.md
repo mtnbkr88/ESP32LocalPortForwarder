@@ -46,7 +46,7 @@ the AP will be turned off after the static IP is set.
 I also included OTA firmware updates through the web like I do in all my ESP32 projects 
 so I can do firmware updates without physically connecting to the ESP32.
 
-The rest of this description is from README.md in martin-ger's esp21_nat_router. It's 
+The rest of this description is from README.md in martin-ger's esp21_nat_router. It 
 describes a lot of functionality still available in this firmware.
 
 This is a firmware to use the ESP32 as WiFi NAT router. It can be used as
