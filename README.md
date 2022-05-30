@@ -21,17 +21,18 @@ port forwarding back onto the same network and the Arduino IDE which I normally 
 not support modifying the lwip library. So this was my first attempt at using ESP-IDF.
 
 Starting with ESP-IDF version 4.4.0 I made some modifications to the following lwip 
-files to support port forwarding back onto the same network the packets came in on
-(It would be nice if espressif incorporates these changes into future versions of lwip):
+files to support port forwarding back onto the same network the packets came in on.
+I submitted these changes as an update to esp-lwip.2.1.2 and they were accepted:
 
  ESP-IDF\components\lwip\lwip\src\core\ipv4\ip4.c  
  ESP-IDF\components\lwip\lwip\src\core\ipv4\ip4_napt.c  
  ESP-IDF\components\lwip\lwip\src\include\lwip\ip4_napt.h  
- ESP-IDF\components\lwip\lwip\src\include\lwip\opt.h  
 
 I had to hard code turning on port forwarding in opt.h because menuconfig does not handle
 turning on all options needed.
  
+ ESP-IDF\components\lwip\lwip\src\include\lwip\opt.h  
+
 The ESP32 Local Port Forwarder as built can support up to 32 port forwarding rules as 
 defined by IP_PORTMAP_MAX set in lwip_napt.h.
 
